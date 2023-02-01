@@ -2,11 +2,15 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
-app.get('/', (req, res) => {
+const consoleLog = require('./practice-middleware')
+
+app.use(consoleLog) 
+
+app.get('/', consoleLog, (req, res) => {
     res.sendFile(path.resolve(__dirname, './new-public/index.html'))
   })
 
-app.get('/sample', (req, res) => {
+app.get('/sample', consoleLog, (req, res) => {
     res.status(200).send('This is working')
 } )
 
