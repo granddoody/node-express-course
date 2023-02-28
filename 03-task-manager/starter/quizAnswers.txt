@@ -1,0 +1,5 @@
+1. Middleware  is used to process incoming requests and perform a certain function before it sends out a response. 
+2. CRUD stands for Create, Read, Update and Destroy
+3. 
+    1.In order to access information in an .env file, you must require the dotenv package and then use process.env 
+    2. To protect contents of the .env file, we must create a .gitignore file which tells github which files to ignore when pushing files to the github repository
